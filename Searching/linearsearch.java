@@ -6,6 +6,8 @@ public class linearsearch {
         System.out.println("what is the system log on the call");
         System.out.println("This changes is from the github");
         System.out.print("Again this is from github");
+
+        System.out.println("How is this changes done");
     }
 
     
