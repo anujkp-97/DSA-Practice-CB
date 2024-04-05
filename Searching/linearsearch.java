@@ -1,13 +1,25 @@
 package Searching;
 public class linearsearch {
+    public static int linear(int arr[], int n)
+    {
+
+            for(int i=0; i<arr.length; i++)
+            {
+                if(arr[i] == n){
+                    return 1;
+                }
+            }
+        return -1;
+    }
     public static void main(String[] args) {
         
-        System.out.println("Hello this is the code from cloning the git repository.");
-        System.out.println("what is the system log on the call");
-        System.out.println("This changes is from the github");
-        System.out.print("Again this is from github");
+        int arr[] = {3,4,4,5,6,7,8};
+        int n=6;
 
-        System.out.println("How is this changes done");
+       int res = linear(arr, n);
+       if(res==1) System.out.println("Element found");
+       else System.out.println("Element not found");
+      
     }
 
     
