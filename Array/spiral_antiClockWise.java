@@ -29,7 +29,7 @@ public class spiral_antiClockWise {
                 arr[i][j] = sc.nextInt();
             }
         }
-
+        sc.close();
         spiral(arr);
         
     }
