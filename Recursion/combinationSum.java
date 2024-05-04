@@ -1,16 +1,18 @@
 package Recursion;
+import java.util.*;
 public class combinationSum {
 
-    public static void Combination(int[] coin, int amount, String ans, int idx) {
+    public static void Combination(int[] coin, int amount, String ans, int idx, List ll) {
 		if (amount == 0) {
-			System.out.println(ans);
+			// System.out.println(ans);
+			ll.add(ans);
 			return;
 		}
 		for (int i = idx; i < coin.length; i++) {
 
 			if (amount >= coin[i]) {
 //						amount -= coin[i];
-				Combination(coin, amount - coin[i], ans + coin[i], i);
+				Combination(coin, amount - coin[i], ans + coin[i], i,ll);
 				// amount += coin[i];
 			}
 		}
@@ -20,7 +22,10 @@ public class combinationSum {
         
         int[] coin = { 2, 3, 5 };
 		int amount = 7;
-		Combination(coin, amount, "", 0);
+		List ll = new ArrayList<>();
+		Combination(coin, amount, "", 0, ll);
+		
+		System.out.println(ll);
 
     }
 
