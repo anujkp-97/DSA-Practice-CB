@@ -5,7 +5,7 @@ public class subarray_sum {
     public static void print(int arr[], int sum, List<Integer> al, List<List<Integer>> ans, int idx)
     {   
 
-        if(sum ==0)
+        if(sum == 0 )
         {
             ans.add(new ArrayList<>(al));
             return;
@@ -18,6 +18,7 @@ public class subarray_sum {
 
                 al.add(arr[i]);
                 print(arr, sum-arr[i], al, ans, idx);
+
                 al.remove(al.size()-1);
             }
         }
