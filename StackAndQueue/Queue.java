@@ -1,9 +1,9 @@
 package StackAndQueue;
 
 public class Queue {
-    private int[] arr;
-    private int size;
-    private int front;
+     int[] arr;
+     int size;
+     int front;
 
     public Queue(){
         arr = new int[5];

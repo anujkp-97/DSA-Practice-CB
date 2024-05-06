@@ -2,7 +2,7 @@ package StackAndQueue;
 
 public class stack  {
 
-    private int[] arr;
+     int[] arr;
     private int idx;
 
     public stack(){
