@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class add_client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         add_Element ll = new add_Element();
         ll.addFirst(10);
@@ -13,6 +13,8 @@ public class add_client {
         ll.display();
 
         ll.addFirst(2);
+        ll.display();
+        ll.addIndex(3, 3);
         ll.display();
     }
     

@@ -35,9 +35,43 @@ public class add_Element {
                 nn.val = item;
                 tail.next = nn;
                 tail = nn;
+                size++;
 
             }
 
+        }
+
+        public void addIndex(int k, int item) throws Exception
+        {
+            if(k ==0){
+                addFirst(item);
+            }
+            else if(k ==size){
+                addLast(item);
+            }
+            else{
+                Node nn = new Node();
+                nn.val = item;
+                Node prev = getNode(k-1);
+                nn.next = prev.next;
+                prev.next = nn;
+                size++;
+            }
+        }
+
+        // access the address of particular node
+        public Node getNode(int k) throws Exception{
+            if(k<0 || k>=size)
+            {
+                throw new Exception("Baklol size dekh eska!!");
+            }
+            Node tmp  = head;
+            for(int i=0; i<k; i++)
+            {
+                tmp = tmp.next;
+
+            }
+            return tmp;
         }
 
         // display
