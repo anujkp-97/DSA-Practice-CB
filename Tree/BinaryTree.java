@@ -125,5 +125,75 @@ public class BinaryTree {
         return l || r;
     }
 
+    // height
+    public int ht(){
+        return ht(root);
+    }
+
+    private int ht(Node node){
+        if(node == null){
+            return -1;
+        }
+
+        int lh = ht(node.left);
+        int rh = ht(node.right);
+
+        return Math.max(lh ,rh) + 1;
+    }
+
+    // pre-order traversal
+
+    public void preOrder(){
+        preOrder(root);
+        System.out.println();
+    }
+
+    private void preOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        System.out.print (node.val +" ");
+
+        preOrder(node.left);
+        preOrder(node.right);
+
+    }
+
+    // In-Order
+
+    public void inOrder(){
+        inOrder(root);
+        System.out.println();
+    }
+
+    private void inOrder(Node node){
+        if(node == null){
+            return;
+        }
+        inOrder(node.left);
+        System.out.print(node.val +" ");
+        inOrder(node.right);
+
+   }
+
+   // post - order
+
+   
+   public void postOrder(){
+    postOrder(root);
+    System.out.println();
+}
+
+private void postOrder(Node node){
+    if(node == null){
+        return;
+    }
+    inOrder(node.left);
+   
+    inOrder(node.right);
+    System.out.print(node.val +" ");
+
+}
     
 }

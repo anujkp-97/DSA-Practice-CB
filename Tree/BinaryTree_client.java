@@ -1,5 +1,7 @@
 package Tree;
 
+import Miscellaneous.stock_span;
+
 public class BinaryTree_client {
     public static void main(String[] args) {
         // input
@@ -16,6 +18,14 @@ public class BinaryTree_client {
 
         System.out.println("-----------------------------");
         System.out.println(bt.find(600));
+
+        System.out.println("-----------------------------");
+        System.out.println(bt.ht());
+
+        bt.preOrder();
+        bt.inOrder();
+        bt.postOrder();
+        
     }
     
 }
